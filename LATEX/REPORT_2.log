@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.25)  16 NOV 2023 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.25)  16 NOV 2023 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,6 +396,10 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
 (e:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (20.92755pt too wide) detected at line 115
+[]
+ []
+
 No file REPORT_2.bbl.
 [1{e:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./REPORT_2.aux)
@@ -410,8 +414,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  5864 strings out of 475188
- 81112 string characters out of 5767814
- 1951248 words of memory out of 5000000
+ 81116 string characters out of 5767814
+ 1974248 words of memory out of 5000000
  27062 multiletter control sequences out of 15000+600000
  572835 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -440,7 +444,7 @@ xmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb><e:/texlive/2023/texmf-di
 st/fonts/type1/public/nanumtype1/nanummjmc8.pfb><e:/texlive/2023/texmf-dist/fon
 ts/type1/public/nanumtype1/nanummjmd5.pfb><e:/texlive/2023/texmf-dist/fonts/typ
 e1/public/nanumtype1/nanummjmd6.pfb>
-Output written on REPORT_2.pdf (1 page, 536557 bytes).
+Output written on REPORT_2.pdf (1 page, 538014 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  82 compressed objects within 1 object stream
