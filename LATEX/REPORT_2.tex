@@ -1,0 +1,124 @@
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.2 distribution.
+%   Version 4.2a of REVTeX, December 2014
+%
+%   Copyright (c) 2014 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.2
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+\usepackage{kotex}
+\usepackage{physics}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+\begin{document}
+
+
+\title{연구}
+
+\author{서울대학교 전기정보공학부 2018-12432 박정현}
+ \email{alexist@snu.ac.kr}
+\date{\today}% It is always \today, today,
+      
+\maketitle
+
+%\tableofcontents
+
+\section{\label{sec:level1}Thermal Effect on AOM}
+For 2 qubit gate it is well know thatn[34]
+\begin{align}
+	\mathcal{F} &= \frac{1}{8}[2+2(\Gamma_{1}+\Gamma_{2})+\Gamma_{+}+\Gamma_{-}]\\
+	\Gamma_{s} &= \exp\Bigg[-4\left(\bar{n}+\frac{1}{2}\right)\sum_{p} \abs{\alpha_{s,p}}^{2}\Bigg]\\
+	\Gamma_{\pm} &= \exp\Bigg[-4\left(\bar{n}+\frac{1}{2}\right)\sum_{p} \abs{\alpha_{1,p}\pm\alpha_{2,p}}^{2}\Bigg]	
+\end{align}
+And It is also well know that[34]
+\begin{align}
+	\alpha_{s,p}(t) &= i\eta_{s,p}\int_{0}^{t}\Omega_{s}(t')\cos(\mu t' + \phi_{d})\exp(i\omega_{p}t')dt'
+\end{align}
+Fourier transform makes equation as below
+\begin{align}
+	\alpha_{s,p}(\omega) &=  \mathcal{F}\Bigg[i\eta_{s,p}\int_{0}^{t}\Omega_{s}(t')\cos(\mu t' + \phi_{d})\exp(i\omega_{p}t')dt'\Bigg]\\
+	&= \frac{\eta_{s,p}}{\omega}\mathcal{F}\Bigg[\Omega_{s}(t)\cos(\mu t + \phi_{d})\exp(i\omega_{p}t)\Bigg]\\
+	&= \frac{\eta_{s,p}}{2\omega}\Bigg[\Omega_{s}(\omega - \mu - \omega_{p})+\Omega_{s}(\omega + \mu - \omega_{p})\Bigg]
+\end{align}
+
+Rabi frequency $\Omega$ has form like below equation.
+\begin{align}
+	\Omega &= \frac{pE}{\hbar}
+\end{align}
+
+Suppose electric field from AOM has a linearity like below formula.
+\begin{align}
+	E_{out}(\omega) &= \beta_{1} E_{in} (\omega) * V_{in}(\omega)
+\end{align}
+
+Suppose, $V_{in}$ is come from DDS, which has single tone frequency of $\omega_{0}$ and consider only first order from AOM. Then, it would have thermal noise, and flicker noise. In addition, laser is made from electronic device and it would have thermal noise and flicker noise, so will be written as follow equation.
+
+\begin{align}
+	\begin{aligned}
+	E_{out}(\omega) &= \frac{\beta_{1}}{4}\Bigg(\delta(\omega - \omega_{L}) + \sqrt{4kTR_{L}} + \frac{A_{1}}{(\omega-\omega_{L})^{\gamma_{1}/2}}\Bigg)\\
+	&* \Bigg(\delta(\omega-\omega_{0}) + \sqrt{4kTR_{DDS}} + \frac{A_{2}}{(\omega-\omega_{0})^{\gamma_{2}/2}}\Bigg)
+	\end{aligned}
+\end{align}
+
+So, $\alpha_{s,p}$ would be as follow equation
+\begin{align}
+	\begin{aligned}	
+		\alpha_{s,p}(\omega) &= \frac{\eta_{s,p}}{2\omega}\Bigg[\Omega_{s}(\omega - \mu - \omega_{p})+\Omega_{s}(\omega + \mu - \omega_{p})\Bigg]
+	\end{aligned}
+\end{align}
+
+\section{\label{sec:level1}Reference}
+
+\end{document}
+%
+% ****** End of file apssamp.tex ******
